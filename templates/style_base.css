@@ -1,0 +1,89 @@
+*{margin: 0px; padding: 0px;}
+
+/* @font-face{font-family: "ProductSans";src: url("https://raw.githubusercontent.com/JeelPatel231/hosted-stuff/master/fonts/ProductSans.ttf") format("truetype"); }
+@font-face{font-family: "Roboto";src: url("https://raw.githubusercontent.com/JeelPatel231/hosted-stuff/master/fonts/Roboto-Regular.ttf") format("truetype"); } */
+
+@media screen and (max-width: 660px){
+    div.menu > a{display: contents;position: relative;padding: 10px;}
+    div.menu{float: left;position: absolute;margin: 10px 0 0 21px;}
+}
+@media screen and (min-width: 660px){
+    #hamburger{display: none;}
+    #navbar{height: 60px;}
+}
+
+@media screen and (min-width: 682px){
+    .note-card{width: 300px;margin: 10px;}
+}
+@media screen and (max-width: 681px){
+    .note-card{margin: 10px 5% 10px 5%;width: 83%;}
+}
+
+a:link, a:visited {
+    color: rgba(255, 255, 255, 0.87);
+    text-decoration:none;
+  }
+  
+  a:link:active, a:visited:active {
+    color:rgba(255, 255, 255, 0.87);
+  }
+
+#navbar{
+    position: sticky;
+    background: #000000ee;
+    color: #ffffffee;
+    font-size: 40px;
+    border-bottom: 1px solid #fff;
+    z-index: 3;
+    top:0;
+    overflow-y: hidden;
+    transition: 200ms ease;
+    backdrop-filter: blur(5px);
+}
+
+
+#hamburger{
+    background-image: url('https://raw.githubusercontent.com/JeelPatel231/hosted-stuff/master/icons/menu-white-18dp.svg');
+    height: 40px;
+    width: 40px;
+    margin: 8px 10px 0 0;
+    background-size: cover;
+    float: right;
+}
+
+.menu{float: right;font-size: 20px;font-family: 'Open Sans';}
+
+.menu > a{
+    padding: 15px;display: inline-flex;left: 0px; line-height: 30px;
+}
+
+.menuhide{
+    height: 60px;
+}
+.menureveal{
+    height: 200px;
+}
+
+.note-card{
+    background: #ffffff18;
+    height: auto;
+    font-family: Roboto;
+    color: #ffffff;
+    padding: 10px 10px 0 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    display: inline-table;
+}
+
+.card{
+    background: #ffffff30;
+}
+
+.note-card-footer{
+    border-top: #fff solid 2px;
+    font-size: small;
+    color: #ffffffc4;
+    padding: 4px 0 4px 0;
+    margin: 10px 0 0 0;
+    word-break: break-all;
+}

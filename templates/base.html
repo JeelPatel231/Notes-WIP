@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
+    <link rel="stylesheet" href="{% static 'style_base.css' %}">
+    <script src="{% static 'script.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes - {{ title }}</title>
+</head>
+<body bgcolor="#121212">
+    <!-- NAVBAR START -->
+    <div id="navbar" class="menuhide">
+        <ul style="list-style: none;">
+            <a href="{% url 'homepage' %}"><li style="padding: 0 0 6px 20px;font-family: 'Open Sans';display: inline-flex;"><div style="padding: 0 0 0 10px;"> Notes </div></li></a>
+
+            <div id="hamburger" onclick="menu()"></div>
+
+            <div class="menu">
+                <a href="{% url 'homepage'%}"><li>Home</li></a>
+                <a href="{% url 'features'%}"><li>Features</li></a>
+                <a href="{% url 'stats'%}"><li>Stats</li></a>
+                <a href="{% url 'contact'%}"><li>Contact</li></a>
+            </div>
+        </ul>
+    </div>
+<!-- NAVBAR END -->
+
+<!-- CONTENT BLOCK START -->
+    {% block content %}
+    {% endblock content %}
+<!-- CONTENT BLOCK END -->
+</body>
+</html>

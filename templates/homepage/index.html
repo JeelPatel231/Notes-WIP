@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div style="text-align: center;padding: 10px;" class="note-card" > Make a Note! </div>
+
+{% for note in notes %}
+<div class="note-card">
+        {{ note.content }}
+            <div class="note-card-footer">{{ note.author }}</div>
+</div>
+{% endfor %}
+
+
+{% endblock content %}
