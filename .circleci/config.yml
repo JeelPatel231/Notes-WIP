@@ -12,7 +12,7 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: ./manage.py runserver
+          command: chmod +x manage.py && ./manage.py runserver
           name: Test
 
 workflows:
