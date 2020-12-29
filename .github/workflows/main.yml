@@ -31,5 +31,5 @@ jobs:
           sudo apt-get update
           alias python=python3
           sudo apt-get install python3
-          pip3 install django django-heroku && python3 manage.py runserver
+          pip3 install django && python3 manage.py runserver
           
