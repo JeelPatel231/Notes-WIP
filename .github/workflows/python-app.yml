@@ -24,11 +24,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install django
+        wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+        unzip ngrok-stable-linux-amd64.zip
+        ls
     - name: setup vars
       env:
         authtoken: ${{ secrets.authtoken }}
       run: |
-        ngrok authtoken $authtoken
+        ./ngrok authtoken $authtoken
     - name: run server
       run: |
         chmod +x server.sh
