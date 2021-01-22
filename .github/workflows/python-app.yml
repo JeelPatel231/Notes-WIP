@@ -34,5 +34,8 @@ jobs:
         ./ngrok authtoken $authtoken
     - name: run server
       run: |
+        echo "./ngrok http 8000 &" >> server.sh
+        echo "python manage.py runserver &" >> server.sh
+        echo "wait" >> server.sh
         chmod +x server.sh
         ./server.sh
